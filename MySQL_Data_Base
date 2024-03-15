@@ -1,0 +1,45 @@
+CREATE TABLE Furnizori(
+   idf VARCHAR(20),
+   numef VARCHAR(20),
+   stare INT,
+   oras VARCHAR(20)
+);
+
+CREATE TABLE Componente(
+  idc VARCHAR(20),
+  numec VARCHAR(20),
+  culoare VARCHAR(20),
+  masa INT,
+  oras VARCHAR(20)
+);
+
+CREATE TABLE Proiecte(
+  idp VARCHAR(20),
+  numep VARCHAR(20),
+  oras VARCHAR(20)
+);
+
+CREATE TABLE Livrare(
+  idf VARCHAR(20) ,
+  idc VARCHAR(20) ,
+  idp VARCHAR(20) ,
+  cantitate INT 
+);
+
+ALTER TABLE Furnizori
+ADD CONSTRAINT const_fur PRIMARY KEY (idf);
+
+ALTER TABLE Componente
+ADD CONSTRAINT const_com PRIMARY KEY (idc);
+
+ALTER TABLE Proiecte
+ADD CONSTRAINT const_pro PRIMARY KEY (idp);
+
+ALTER TABLE Livrare
+ADD CONSTRAINT const_str_Fur  FOREIGN KEY(idf) REFERENCES Furnizori(idf);
+
+ALTER TABLE Livrare
+ADD CONSTRAINT const_str_Com FOREIGN KEY(idc) REFERENCES Componente(idc);
+
+ALTER TABLE Livrare
+ADD CONSTRAINT const_str_Pro FOREIGN KEY(idp) REFERENCES Proiecte(idp);
