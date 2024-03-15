@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectpoo.HelloController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="93.0" prefWidth="700.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onFurnizoriButtonClick" text="Furnizori">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onComponenteButtonClick" text="Componente">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onProiecteButtonClick" text="Proiecte">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onLivrariButtonClick" text="Livrare">
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+      <HBox prefHeight="292.0" prefWidth="600.0">
+         <children>
+              <Label fx:id="TabelText" prefHeight="282.0" prefWidth="383.0" textAlignment="CENTER" />
+            <VBox prefHeight="288.0" prefWidth="402.0">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#cautaFurnizor" text="Cauta-Furnizor" />
+                        <TextField fx:id="searchidf" promptText="idf" />
+                    </items>
+                  </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#cautaComponenta" text="Cauta-Componenta" />
+                        <TextField fx:id="searchidc" promptText="idc" />
+                    </items>
+                  </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#cautaProiect" text="Cauta-Proiect" />
+                        <TextField fx:id="searchidp" promptText="idp" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#insertFurnizori" text="Insert-Furnizori" />
+            <TextField fx:id="idf" prefHeight="25.0" prefWidth="47.0" promptText="idf" />
+            <TextField fx:id="numef" prefHeight="25.0" prefWidth="119.0" promptText="numef" />
+            <TextField fx:id="stare" prefHeight="25.0" prefWidth="132.0" promptText="stare" />
+            <TextField fx:id="orasf" prefHeight="25.0" prefWidth="136.0" promptText="oras" />
+        </items>
+      </ToolBar>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#insertComponenta" text="Insert-Componente" />
+            <TextField fx:id="idc" prefHeight="25.0" prefWidth="58.0" promptText="idc" />
+            <TextField fx:id="numec" prefHeight="25.0" prefWidth="90.0" promptText="numec" />
+            <TextField fx:id="culoare" prefHeight="25.0" prefWidth="97.0" promptText="culoare" />
+            <TextField fx:id="masa" prefHeight="25.0" prefWidth="88.0" promptText="masa" />
+            <TextField fx:id="orasc" prefHeight="25.0" prefWidth="108.0" promptText="oras" />
+        </items>
+      </ToolBar>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#insertLivrare" text="Insert-Proiect" />
+            <TextField fx:id="idp" prefHeight="25.0" prefWidth="61.0" promptText="idp" />
+            <TextField fx:id="numep" promptText="numep" />
+            <TextField fx:id="orasp" promptText="oras" />
+        </items>
+      </ToolBar>
+    </children>
+</VBox>
